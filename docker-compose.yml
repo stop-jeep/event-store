@@ -1,0 +1,15 @@
+version: '3'
+services:
+  event-store:
+    image: eventstore/eventstore
+    restart: always
+    volumes:
+      - event-store-data:/var/lib/eventstore
+    container_name: event-store
+    ports:
+      - "2113:2113"
+volumes:
+  event-store-data:
+
+
+
