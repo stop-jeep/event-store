@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: event-store-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: event-store
+  ports:
+    - name: event-store-port
+      protocol: TCP
+      port: 2113
+      targetPort: 2113
